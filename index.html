@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Practice Pro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <header>
+        <h1>QA Elements + Forms Practice</h1>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h3>Elements</h3>
+            <button onclick="show('textbox')">Text Box</button>
+            <button onclick="show('checkbox')">Check Box</button>
+            <button onclick="show('radio')">Radio Button</button>
+            <button onclick="show('table')">Web Tables</button>
+            <button onclick="show('buttons')">Buttons</button>
+            <button onclick="show('links')">Links</button>
+            <button onclick="show('broken')">Broken Links - Images</button>
+            <button onclick="show('upload')">Upload & Download</button>
+            <button onclick="show('dynamic')">Dynamic Properties</button>
+
+            <h3>Forms</h3>
+            <button onclick="show('practiceForm')">Practice Form</button>
+            <button onclick="show('examplesForm')">Examples Form</button>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- PRACTICE FORM -->
+            <div id="practiceForm" class="section active">
+                <div class="card">
+                    <h2>Practice Form</h2>
+
+                    <div class="form-grid">
+                        <div><label>First Name *</label><input id="firstName"></div>
+                        <div><label>Last Name *</label><input id="lastName"></div>
+                        <div><label>Email *</label><input type="email" id="email"></div>
+                        <div><label>Mobile *</label><input id="mobile"></div>
+
+                        <div>
+                            <label>Gender</label>
+                            <select id="gender">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div><label>Date of Birth</label><input type="date"></div>
+                        <div><label>Subject</label><input></div>
+
+                        <div>
+                            <label>State</label>
+                            <select>
+                                <option>Lima</option>
+                                <option>Arequipa</option>
+                                <option>Cusco</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:15px">
+                        <label>Hobbies</label><br>
+                        <input type="checkbox"> Sports
+                        <input type="checkbox"> Reading
+                        <input type="checkbox"> Music
+                    </div>
+
+                    <div style="margin-top:15px">
+                        <label>Address</label>
+                        <textarea></textarea>
+                    </div>
+
+                    <button class="action" onclick="submitForm()">Submit</button>
+                    <p id="formResult" class="result"></p>
+                </div>
+            </div>
+
+            <!-- ELEMENTS -->
+            <div id="textbox" class="section">
+                <div class="card">
+                    <h2>Text Box</h2>
+
+                    <input placeholder="Nombre" id="nameText">
+                    <input placeholder="Email" id="emailText">
+
+                    <button class="action" onclick="validateTextBox()">Enviar</button>
+
+                    <p id="textBoxMessage" class="result"></p>
+                </div>
+            </div>
+
+            <div id="checkbox" class="section">
+                <div class="card">
+                    <h2>Check Box</h2>
+                    <input type="checkbox"> HTML<br>
+                    <input type="checkbox"> CSS<br>
+                    <input type="checkbox"> JS
+                </div>
+            </div>
+
+            <div id="radio" class="section">
+                <div class="card">
+                    <h2>Radio Button</h2>
+                    <input type="radio" name="r"> Sí<br>
+                    <input type="radio" name="r"> No
+                </div>
+            </div>
+
+            <div id="table" class="section">
+                <div class="card">
+                    <h2>Web Table</h2>
+                    <table border="1" width="100%">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="buttons" class="section">
+                <div class="card">
+                    <h2>Buttons</h2>
+                    <button ondblclick="alert('Doble click')" class="action">Doble Click</button>
+                    <button onclick="alert('Click')" class="action">Click</button>
+                </div>
+            </div>
+
+            <div id="links" class="section">
+                <div class="card">
+                    <h2>Links</h2>
+                    <a href="https://google.com" target="_blank">Ir a Google</a>
+                </div>
+            </div>
+
+            <div id="broken" class="section">
+                <div class="card">
+                    <h2>Broken Links</h2>
+                    <img src="broken.jpg" width="100%">
+                </div>
+            </div>
+
+            <div id="upload" class="section">
+                <div class="card">
+                    <h2>Upload</h2>
+                    <input type="file">
+                    <button class="action">Subir</button>
+                </div>
+            </div>
+
+            <div id="dynamic" class="section">
+                <div class="card">
+                    <h2>Dynamic Properties</h2>
+                    <button id="dynamicBtn" class="action">Cambia color</button>
+                </div>
+            </div>
+
+            <!-- EXAMPLES FORM -->
+            <section id="examplesForm" class="section">
+                <h2>Examples Forms</h2>
+
+                <!-- Botones de selección -->
+                <div class="form-tabs">
+                    <button onclick="showForm('login')">Login</button>
+                    <button onclick="showForm('register')">Register</button>
+                    <button onclick="showForm('payment')">Payment</button>
+                    <button onclick="showForm('contact')">Contact</button>
+                    <button onclick="showForm('survey')">Survey</button>
+                    <button onclick="showForm('booking')">Booking</button>
+                </div>
+
+                <div class="card">
+
+                    <!-- Login -->
+                    <form id="form-login" class="form-box" onsubmit="handleLogin(event)">
+                        <h3>Login</h3>
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                        <input type="password" id="loginPass" placeholder="Password" required>
+                        <button class="action">Ingresar</button>
+                    </form>
+
+                    <!-- Register -->
+                    <form id="form-register" class="form-box" onsubmit="handleRegister(event)" style="display:none;">
+                        <h3>Register</h3>
+                        <input type="text" id="regName" placeholder="Nombre" required>
+                        <input type="email" id="regEmail" placeholder="Email" required>
+                        <input type="password" id="regPass" placeholder="Password" required>
+                        <input type="password" id="regPass2" placeholder="Confirmar Password" required>
+                        <button class="action">Registrarse</button>
+                    </form>
+
+                    <!-- Payment -->
+                    <form id="form-payment" class="form-box" onsubmit="handlePayment(event)" style="display:none;">
+                        <h3>Payment</h3>
+                        <input type="text" id="cardName" placeholder="Nombre en tarjeta" required>
+                        <input type="text" id="cardNumber" placeholder="Número de tarjeta" required>
+                        <input type="month" id="cardDate" required>
+                        <input type="text" id="cardCVV" placeholder="CVV" required>
+                        <button class="action">Pagar</button>
+                    </form>
+
+                    <!-- Contact -->
+                    <form id="form-contact" class="form-box" onsubmit="handleContact(event)" style="display:none;">
+                        <h3>Contact</h3>
+                        <input type="text" id="contactName" placeholder="Nombre" required>
+                        <input type="email" id="contactEmail" placeholder="Email" required>
+                        <textarea id="contactMsg" placeholder="Mensaje" required></textarea>
+                        <button class="action">Enviar</button>
+                    </form>
+
+                    <!-- Survey -->
+                    <form id="form-survey" class="form-box" onsubmit="handleSurvey(event)" style="display:none;">
+                        <h3>Survey</h3>
+                        <input type="number" id="surveyAge" placeholder="Edad" required>
+                        <select id="surveyOption">
+                            <option value="">Selecciona una opción</option>
+                            <option>Sí</option>
+                            <option>No</option>
+                        </select>
+                        <button class="action">Enviar</button>
+                    </form>
+
+                    <!-- Booking -->
+                    <form id="form-booking" class="form-box" onsubmit="handleBooking(event)" style="display:none;">
+                        <h3>Booking</h3>
+                        <input type="text" id="bookName" placeholder="Nombre" required>
+                        <input type="date" id="bookDate" required>
+                        <input type="time" id="bookTime" required>
+                        <input type="number" id="bookPeople" placeholder="Personas" required>
+                        <button class="action">Reservar</button>
+                    </form>
+
+                </div>
+
+                <p id="exampleMessage" class="result"></p>
+            </section>
+        </div>
+    </div>
+</body>
+<footer>
+     <h3 style="text-align: center;">Desarrollado por Giancarlo - QA Architect</h3>
+</footer>
+</html>
