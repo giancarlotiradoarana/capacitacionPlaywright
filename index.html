@@ -25,14 +25,13 @@
             <br/>
             <h3>Elements</h3>
             <button onclick="show('textbox')">Text Box</button>
+            <button onclick="show('textArea')">Text Area</button>
             <button onclick="show('checkbox')">Check Box</button>
             <button onclick="show('radio')">Radio Button</button>
-            <button onclick="show('table')">Web Tables</button>
+            <button onclick="show('selectOption')">Select Option</button>
             <button onclick="show('buttons')">Buttons</button>
             <button onclick="show('links')">Links</button>
-            <button onclick="show('broken')">Broken Links - Images</button>
             <button onclick="show('upload')">Upload & Download</button>
-            <button onclick="show('dynamic')">Dynamic Properties</button>
 
             <h3>Forms</h3>
             <button onclick="show('practiceForm')">Practice Form</button>
@@ -96,13 +95,24 @@
             <div id="textbox" class="section">
                 <div class="card">
                     <h2>Text Box</h2>
-
+                    <label for="opciones">Nombre:</label>
                     <input placeholder="Nombre" id="nameText">
+                    <label for="opciones">Correo:</label>
                     <input placeholder="Email" id="emailText">
 
                     <button class="action" onclick="validateTextBox()">Enviar</button>
 
                     <p id="textBoxMessage" class="result"></p>
+                </div>
+            </div>
+
+            <!--TEXT AREA-->
+             <!-- ELEMENTS -->
+            <div id="textArea" class="section">
+                <div class="card">
+                    <h2>TextArea</h2>
+                    <label for="opciones">Ingrese información:</label>
+                    <textarea placeholder="Ingrese aqui..." id="textArea"></textarea>
                 </div>
             </div>
 
@@ -122,32 +132,27 @@
                     <input type="radio" name="r"> No
                 </div>
             </div>
-
-            <div id="table" class="section">
+                <div id="selectOption" class="section">
                 <div class="card">
-                    <h2>Web Table</h2>
-                    <table border="1" width="100%">
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Edad</th>
-                        </tr>
-                        <tr>
-                            <td>Juan</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>Ana</td>
-                            <td>30</td>
-                        </tr>
-                    </table>
+                    <h2>Select Option</h2>
+                      <label for="opciones">Elige tu pais:</label>
+                    <select id="opciones" name="opciones">
+                       <option value="">-- Selecciona --</option>
+                       <option value="opcion3">Argentina</option>
+                       <option value="opcion2">Colombia</option>
+                       <option value="opcion3">Chile</option>
+                       <option value="opcion1">Perú</option>
+                    </select>
                 </div>
             </div>
+
 
             <div id="buttons" class="section">
                 <div class="card">
                     <h2>Buttons</h2>
-                    <button ondblclick="alert('Doble click')" class="action">Doble Click</button>
-                    <button onclick="alert('Click')" class="action">Click</button>
+                    <label for="opciones">Click para enviar la información</label>
+                </br>
+                    <button onclick="alert('Click')" class="action">Click/Enviar</button>
                 </div>
             </div>
 
@@ -158,25 +163,12 @@
                 </div>
             </div>
 
-            <div id="broken" class="section">
-                <div class="card">
-                    <h2>Broken Links</h2>
-                    <img src="broken.jpg" width="100%">
-                </div>
-            </div>
-
             <div id="upload" class="section">
                 <div class="card">
                     <h2>Upload</h2>
+                    <label for="opciones">Suba sus documentos:</label>
                     <input type="file">
                     <button class="action">Subir</button>
-                </div>
-            </div>
-
-            <div id="dynamic" class="section">
-                <div class="card">
-                    <h2>Dynamic Properties</h2>
-                    <button id="dynamicBtn" class="action">Cambia color</button>
                 </div>
             </div>
 
