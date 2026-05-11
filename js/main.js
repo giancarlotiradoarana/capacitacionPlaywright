@@ -48,12 +48,7 @@ function handleLogin(e) {
     showMessage("Login exitoso");
 }
 
-function validateClickBtn() {
-    const textBtn = document.getElementById("textButton");
-    
-    textBtn.style.color = "green";
-    textBtn.innerText = "El button ha sido clickeado";
-  }
+
 
 function validateTextBox() {
     const name = document.getElementById("nameText").value.trim();
@@ -166,3 +161,10 @@ function showForm(formName) {
 function toggleMenu() {
     document.querySelector(".sidebar").classList.toggle("active");
 }
+
+function validateClickBtn() {
+    const textBtn = document.getElementById("textButton");
+    
+    textBtn.style.color = "green";
+    textBtn.innerText = "El button ha sido clickeado";
+  }
