@@ -21,8 +21,8 @@
 
         <!-- SIDEBAR -->
         <div class="sidebar">
-            <br/>
-            <br/>
+            <br />
+            <br />
             <h3>Elements</h3>
             <button onclick="show('textbox')">Text Box</button>
             <button onclick="show('textArea')">Text Area</button>
@@ -31,7 +31,7 @@
             <button onclick="show('date')">Date</button>
             <button onclick="show('selectOption')">Select Option</button>
             <button onclick="show('buttons')">Buttons</button>
-          
+
             <button onclick="show('upload')">Upload & Download</button>
 
             <h3>Forms</h3>
@@ -108,7 +108,7 @@
             </div>
 
             <!--TEXT AREA-->
-             <!-- ELEMENTS -->
+            <!-- ELEMENTS -->
             <div id="textArea" class="section">
                 <div class="card">
                     <h2>TextArea</h2>
@@ -133,7 +133,7 @@
                 </div>
             </div>
 
-              <div id="date" class="section">
+            <div id="date" class="section">
                 <div class="card">
                     <h2>Date</h2>
                     <input type="date" name="r" placeholder="dd/mm/aaaa"><br>
@@ -141,16 +141,16 @@
             </div>
 
 
-                <div id="selectOption" class="section">
+            <div id="selectOption" class="section">
                 <div class="card">
                     <h2>Select Option</h2>
-                      <label for="opciones">Elige tu pais:</label>
+                    <label for="opciones">Elige tu pais:</label>
                     <select id="opciones" name="opciones">
-                       <option value="">-- Selecciona --</option>
-                       <option value="opcion3">Argentina</option>
-                       <option value="opcion2">Colombia</option>
-                       <option value="opcion3">Chile</option>
-                       <option value="opcion1">Perú</option>
+                        <option value="">-- Selecciona --</option>
+                        <option value="opcion3">Argentina</option>
+                        <option value="opcion2">Colombia</option>
+                        <option value="opcion3">Chile</option>
+                        <option value="opcion1">Perú</option>
                     </select>
                 </div>
             </div>
@@ -160,8 +160,13 @@
                 <div class="card">
                     <h2>Buttons</h2>
                     <label for="opciones">Click para enviar la información</label>
-                </br>
-                    <button onclick="alert('Click')" class="action">Click/Enviar</button>
+                    </br>
+                    <button onclick="validateClickBtn()" class="action">
+                        Click/Enviar
+                    </button>
+
+                    <p id="textButton" class="result"></p>
+
                 </div>
             </div>
 
@@ -264,6 +269,7 @@
     </div>
 </body>
 <footer>
-     <h3 style="text-align: center;">Desarrollado por Giancarlo - QA Architect</h3>
+    <h3 style="text-align: center;">Desarrollado por Giancarlo - QA Architect</h3>
 </footer>
+
 </html>

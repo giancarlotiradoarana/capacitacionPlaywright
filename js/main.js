@@ -48,6 +48,13 @@ function handleLogin(e) {
     showMessage("Login exitoso");
 }
 
+function validateClickBtn() {
+    const textBtn = document.getElementById("textButton");
+    
+    textBtn.style.color = "green";
+    textBtn.innerText = "El button ha sido clickeado";
+  }
+
 function validateTextBox() {
     const name = document.getElementById("nameText").value.trim();
     const email = document.getElementById("emailText").value.trim();
