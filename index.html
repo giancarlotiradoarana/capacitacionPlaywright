@@ -63,11 +63,13 @@
                         </div>
 
                         <div><label>Date of Birth</label><input type="date"></div>
-                        <div><label>Subject</label><input></div>
+                        <div><label>Subject</label>
+                            <input id="subject">
+                        </div>
 
                         <div>
                             <label>State</label>
-                            <select>
+                            <select id="state">
                                 <option>Lima</option>
                                 <option>Arequipa</option>
                                 <option>Cusco</option>
@@ -77,14 +79,14 @@
 
                     <div style="margin-top:15px">
                         <label>Hobbies</label><br>
-                        <input type="checkbox"> Sports
-                        <input type="checkbox"> Reading
-                        <input type="checkbox"> Music
+                        <input type="checkbox" id="sports"> Sports
+                        <input type="checkbox" id="reading"> Reading
+                        <input type="checkbox" id="music"> Music
                     </div>
 
                     <div style="margin-top:15px">
                         <label>Address</label>
-                        <textarea></textarea>
+                        <textarea id="textarea"></textarea>
                     </div>
 
                     <button class="action" onclick="submitForm()">Submit</button>
